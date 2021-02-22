@@ -1,4 +1,4 @@
-# jscounter
+# JS Counter
 A counter made with Javascript
 
 📱On mobile the left hand button allows you tu use either hand by switching the positions of the buttons 
