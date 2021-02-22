@@ -1,0 +1,340 @@
+@font-face {
+  font-family: SF-Pro-Rounded-Bold;
+  src: url(SF-Pro-Rounded-Bold.woff);
+  font-weight: bold;
+  font-display: swap;
+}
+
+:root {
+  --shadow: 5px 5px 15px #e2e2e2, -5px -5px 15px #ffffff;
+  --white: #f0f0f3;
+}
+
+body {
+  font-family: SF-Pro-Rounded-Bold, Helvetica;
+  background: var(--white);
+  touch-action: manipulation; /* Disables double-tap to zoom */
+  user-select: none; /* Disables text selection to allow repeated tapping */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+}
+
+p {
+  font-size: 4em;
+  text-align: center;
+  margin: 30px auto;
+}
+
+#container {
+  text-align: center;
+  margin: auto;
+}
+
+.style {
+  box-shadow: var(--shadow);
+  background: var(--white);
+  text-decoration: none;
+  border-style: none;
+  transition: box-shadow 2000ms;
+}
+
+.numberStyle {
+  font-size: 7.5em;
+  border-radius: 58px;
+  width: 250px;
+  height: 250px;
+  margin-top: 40px;
+  margin: auto;
+  line-height: 250px;
+}
+
+.styleButtons {
+  font-size: 4.5em;
+  position: absolute;
+  border-radius: 60px;
+  width: 110px;
+  height: 110px;
+  padding: 0; /* Required due to iOS Safari adding extra left padding by default */
+  line-height: 0;
+  padding-bottom: 7px;
+  cursor: grab;
+  outline: none;
+}
+
+.styleButtons:active {
+  background-color: #ededed;
+  cursor: grabbing;
+}
+
+#increment {
+  margin-top: 60px;
+  margin-left: 19vw;
+}
+
+#decrement {
+  margin-top: 200px;
+}
+
+#leftHand {
+  margin-top: 60px;
+  margin-left: -45vw;
+}
+
+img {
+  width: 70px;
+  height: 70px;
+  user-select: none;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+}
+
+footer {
+  font-size: 0.5em;
+  color: #d1d3d4;
+  position: fixed;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                Media Queries                               */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                         Small Smartphones Portrait                         */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (max-width: 320px) {
+  p {
+    font-size: 2.5em;
+    margin: 5px;
+  }
+
+  .numberStyle {
+    width: 180px;
+    height: 180px;
+    font-size: 6em;
+    border-radius: 42px;
+    margin-top: 20px;
+    line-height: 180px;
+  }
+
+  .styleButtons {
+    width: 80px;
+    height: 80px;
+  }
+
+  #increment {
+    margin-top: 20px;
+    margin-left: 15vw;
+  }
+
+  #decrement {
+    margin-top: 100px;
+  }
+
+  #leftHand {
+    margin-top: 20px;
+    margin-left: -45vw;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                         Medium Smartphones Portrait                        */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+  p {
+    font-size: 3em;
+    margin: 5px;
+  }
+
+  .numberStyle {
+    width: 200px;
+    height: 200px;
+    font-size: 7em;
+    line-height: 200px;
+    border-radius: 47px;
+  }
+
+  #increment {
+    margin-top: 30px;
+    margin-left: 15vw;
+  }
+
+  #decrement {
+    margin-top: 180px;
+  }
+
+  #leftHand {
+    margin-top: 30px;
+    margin-left: -45vw;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              Large Screens                                 */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1920px) {
+  p {
+    font-size: 5em;
+  }
+
+  .numberStyle {
+    width: 400px;
+    height: 400px;
+    font-size: 8em;
+    line-height: 400px;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 105px;
+  }
+
+  .styleButtons {
+    position: unset;
+    width: 200px;
+    height: 200px;
+    font-size: 7em;
+    border-radius: 150px;
+  }
+
+  #increment {
+    margin-right: 150px;
+    margin-left: 0;
+  }
+
+  #decrement {
+    margin-top: 80px;
+  }
+
+  #leftHand,
+  footer,
+  img {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Laptops & Desktops                             */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1025px) and (max-width: 1919px) {
+  p {
+    font-size: 3em;
+  }
+
+  .numberStyle {
+    width: 250px;
+    height: 250px;
+    font-size: 7em;
+    line-height: 250px;
+    margin: auto;
+    border-radius: 58px;
+  }
+
+  .styleButtons {
+    position: unset;
+    width: 150px;
+    height: 150px;
+    font-size: 5em;
+    border-radius: 150px;
+  }
+
+  #increment {
+    margin-right: 100px;
+    margin-left: 0;
+  }
+
+  #decrement {
+    margin-top: 80px;
+  }
+
+  #leftHand,
+  footer,
+  img {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          Tablets, iPads (portrait)                         */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  p {
+    font-size: 6em;
+  }
+
+  .numberStyle {
+    width: 400px;
+    height: 400px;
+    font-size: 12em;
+    line-height: 400px;
+    margin: auto;
+    border-radius: 94px;
+  }
+
+  .styleButtons {
+    position: unset;
+    width: 250px;
+    height: 250px;
+    font-size: 10em;
+    border-radius: 150px;
+    margin-top: 100px;
+  }
+
+  #increment {
+    margin-right: 230px;
+    margin-left: 0;
+  }
+
+  #decrement {
+    margin-top: 80px;
+  }
+
+  #leftHand,
+  footer,
+  img {
+    display: none;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Dark Mode                                 */
+/* -------------------------------------------------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+  body,
+  .style {
+    background: #212121;
+  }
+
+  p,
+  .style,
+  footer {
+    opacity: 87%;
+  }
+
+  p,
+  .style {
+    color: #fff;
+  }
+
+  .style {
+    box-shadow: 10px 10px 15px #1e1e1e, -10px -10px 15px #242424;
+  }
+
+  .styleButtons:active {
+    background-color: #353535;
+  }
+}
