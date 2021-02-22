@@ -6,4 +6,5 @@ A counter made with Javascript
 ⌨️On a computer:
 
 You can increment the number by using ↑, W, ＋ keys
+
 Decrement with ↓, S, − and reset with esc 
