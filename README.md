@@ -9,4 +9,5 @@ A counter made with Javascript
 You can increment the number by using ↑, W, ＋ keys
 
 Decrement with ↓, S, − and reset with esc
+
 Hand icon made by icons8.com
