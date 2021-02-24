@@ -1,3 +1,5 @@
+<img src="icons/safari-pinned-tab.svg" width='100%' height='144'>
+
 # JSCounter
 
 A counter made with Javascript
